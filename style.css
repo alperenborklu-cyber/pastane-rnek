@@ -263,7 +263,7 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     padding: 100px 24px 0;
-    background: linear-gradient(rgba(250, 246, 238, 0.35), rgba(250, 246, 238, 0.85)), url('images/hero.png') center/cover no-repeat;
+    background: linear-gradient(rgba(18, 14, 12, 0.65), rgba(18, 14, 12, 0.88)), url('images/hero.png') center/cover no-repeat;
     overflow: hidden;
 }
 
@@ -297,7 +297,7 @@ header.scrolled {
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 6px;
-    color: var(--color-gold);
+    color: #e5c453; /* Lighter gold for readability on dark background */
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -306,7 +306,7 @@ header.scrolled {
     font-size: 4rem;
     line-height: 1.15;
     margin-bottom: 24px;
-    color: var(--color-text-light);
+    color: #ffffff; /* Crisp white for maximum contrast */
 }
 
 @media (max-width: 768px) {
@@ -317,10 +317,22 @@ header.scrolled {
 
 .hero-desc {
     font-size: 1.1rem;
-    color: var(--color-text-muted);
+    color: #eae3db; /* Light cream-gray for description text */
     max-width: 650px;
     margin: 0 auto 40px;
     font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero .btn-secondary:hover {
+    color: #e5c453;
+    border-color: #e5c453;
+    background: rgba(229, 196, 83, 0.05);
 }
 
 .hero-btns {
