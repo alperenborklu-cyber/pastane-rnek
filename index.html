@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Altınbaşak & Liva esintileriyle hayata geçen premium pastane deneyimi. El yapımı pastalar, şerbetli tatlılar, el yapımı makaronlar ve daha fazlası.">
+    <title>Altınbaşak & Liva | Premium Pastane</title>
+    <!-- CSS Dosyası -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Ikon Kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigasyon -->
+    <header id="home">
+        <div class="header-container">
+            <a href="#home" class="logo">
+                <span class="logo-main">Altınbaşak & Liva</span>
+                <span class="logo-sub">Premium Pastanesi</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Ana Sayfa</a>
+                <a href="#about" class="nav-link">Hikayemiz</a>
+                <a href="#menu" class="nav-link">Ürünlerimiz</a>
+                <a href="#contact" class="nav-link">İletişim</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-icon-btn" onclick="toggleCartDrawer(true)" aria-label="Alışveriş Sepeti">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="#contact" class="contact-btn">Bize Ulaşın</a>
+                
+                <div class="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Giriş (Hero) Alanı -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Sanat ve Lezzetin Buluşma Noktası</span>
+            <h1 class="hero-title">Zarafet Dolu Premium Lezzetler</h1>
+            <p class="hero-desc">Her lokmasında ustalık barındıran, nesiller boyu aktarılan geleneksel tariflerin modern dokunuşlarla şekillendiği benzersiz pastacılık şaheserleri.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-primary">Menüyü Keşfet</a>
+                <a href="#about" class="btn-secondary">Hikayemiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bilgi Kartları -->
+    <section class="info-strip">
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                <h4 class="info-title">%100 Doğal ve Taze</h4>
+                <p class="info-desc">Tüm malzemelerimiz özenle seçilir, günlük olarak taptaze pişirilir.</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <h4 class="info-title">Özel Tasarım Pastalar</h4>
+                <p class="info-desc">En özel günleriniz için hayalinizdeki butik pastayı gerçeğe dönüştürüyoruz.</p>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <h4 class="info-title">Hızlı ve Güvenli Sipariş</h4>
+                <p class="info-desc">Sepetinizi oluşturun, WhatsApp ile anında pastanemize iletin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hikayemiz Alanı -->
+    <section class="section" id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="section-subtitle">Hakkımızda</span>
+                <h2 class="section-title" style="margin-bottom: 30px;">Zanaatkar Pastacılık</h2>
+                <h3>Gelenekten Geleceğe Uzanan Lezzet Aşkı</h3>
+                <p>Altınbaşak ve Liva'nın köklü pastacılık mirasını harmanlayarak, lezzet tutkunlarına premium bir deneyim sunuyoruz. Unlu mamullerimizden şerbetli tatlılarımıza, özel tasarım pastalarımızdan el yapımı makaronlarımıza kadar her bir reçeteyi aynı özenle hazırlıyoruz.</p>
+                <p>Ustalığı sadece bir meslek değil, nesiller boyu aktarılan bir sanat olarak görüyoruz. Kullandığımız en kaliteli Belçika çikolataları, taze yerel meyveler ve sade yağ ile lezzet standartlarımızı en üst seviyede tutuyoruz.</p>
+                <div class="signature-badges">
+                    <div class="badge-item">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">El Yapımı</span>
+                    </div>
+                    <div class="badge-item">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Günlük Üretim</span>
+                    </div>
+                    <div class="badge-item">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Özel Tasarım</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-images">
+                <div class="img-stack">
+                    <img src="images/macarons.png" class="img-main" alt="El Yapımı Makaronlar">
+                    <img src="images/baklava.png" class="img-overlay" alt="Premium Fıstıklı Baklava">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menü ve Ürünler Alanı -->
+    <section class="section" id="menu">
+        <div class="section-header">
+            <span class="section-subtitle">Özenle Hazırlanmış Seçki</span>
+            <h2 class="section-title">Eşsiz Menümüz</h2>
+        </div>
+
+        <!-- Arama ve Filtreleme -->
+        <div class="menu-controls">
+            <div class="category-tabs">
+                <button class="category-tab-btn active" data-category="all">Tüm Ürünler</button>
+                <button class="category-tab-btn" data-category="pastalar">Pastalar</button>
+                <button class="category-tab-btn" data-category="tatlilar">Şerbetli Tatlılar</button>
+                <button class="category-tab-btn" data-category="kurabiyeler">Kurabiyeler</button>
+                <button class="category-tab-btn" data-category="unlu-mamuller">Unlu Mamuller</button>
+            </div>
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="Ürün ismi veya kategori arayın...">
+            </div>
+        </div>
+
+        <!-- Ürün Kartları Izgarası -->
+        <div class="products-grid" id="products-grid">
+            <!-- JavaScript ile doldurulacaktır -->
+        </div>
+    </section>
+
+    <!-- İletişim ve Harita Alanı -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <span class="section-subtitle">Bize Ulaşın</span>
+            <h2 class="section-title">Lokasyon & İletişim</h2>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info-list">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4 class="contact-info-title">Adresimiz</h4>
+                        <p class="contact-info-val">Liman Caddesi, Altın Sokak No:12/A, Çankaya / Ankara</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h4 class="contact-info-title">Telefon / WhatsApp Sipariş Hattı</h4>
+                        <p class="contact-info-val">+90 (555) 123 45 67</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4 class="contact-info-title">Çalışma Saatleri</h4>
+                        <p class="contact-info-val">Her Gün: 08:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interaktif Harita Görünümü (Mock) -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12241.650893322137!2d32.8597419!3d39.9207763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa472f88d2d%3A0xcbe68e2172776c52!2sK%C4%B1z%C4%B1lay%2C%20%C3%87ankaya%2FAnkara!5e0!3m2!1str!2str!4v1782213444678!5m2!1str!2str" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="#home" class="logo" style="margin-bottom: 20px;">
+                    <span class="logo-main" style="color:var(--color-white)">Altınbaşak & Liva</span>
+                </a>
+                <p class="footer-desc">Premium pastacılık sanatını her gün sofralarınıza getiren lezzet durağınız. Her siparişiniz el emeği ve aşkla yoğrulur.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-links-title">Hızlı Linkler</h4>
+                <div class="footer-links">
+                    <a href="#home">Ana Sayfa</a>
+                    <a href="#about">Hikayemiz</a>
+                    <a href="#menu">Ürünlerimiz</a>
+                    <a href="#contact">İletişim</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-links-title">Kategoriler</h4>
+                <div class="footer-links">
+                    <a href="#menu">Premium Pastalar</a>
+                    <a href="#menu">Fıstıklı Şerbetli Tatlılar</a>
+                    <a href="#menu">Taze Kruvasan & Poğaça</a>
+                    <a href="#menu">Makaronlar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Altınbaşak & Liva Pastacılık. Tüm Hakları Saklıdır.</p>
+            <p>Tasarlayan: Antigravity Premium</p>
+        </div>
+    </footer>
+
+    <!-- Ürün Detay Modalı -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeProductModal()" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrapper">
+                    <img id="modal-product-img" src="" class="modal-img" alt="Ürün Detay">
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h2 class="modal-title" id="modal-product-title">Altın Yaprak Çikolatalı Pasta</h2>
+                        <p class="modal-desc" id="modal-product-desc">Belçika çikolatalı mousse ve yenilebilir altın süslemeli pasta.</p>
+                        
+                        <div class="modal-options-title">Boyut / Seçenek</div>
+                        <div class="modal-options" id="modal-product-options">
+                            <!-- JS ile yüklenecek seçenek butonları -->
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="modal-price" id="modal-product-price">850 TL</div>
+                        <button class="btn-primary" onclick="addToCartFromModal()" style="padding: 12px 28px;">Sepete Ekle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alışveriş Sepeti Drawer (Yan Çekmece) -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCartDrawer(false)"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 style="font-size:1.3rem; color:var(--color-white);"><i class="fa-solid fa-bag-shopping" style="color:var(--color-gold); margin-right:10px;"></i> Sepetiniz</h3>
+            <button class="cart-close-btn" onclick="toggleCartDrawer(false)"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- JS ile sepet elemanları doldurulacak -->
+        </div>
+
+        <!-- WhatsApp Sipariş Bilgileri Formu (Üyeliksiz Hızlı Sipariş) -->
+        <div class="cart-footer">
+            <div class="checkout-form-container" id="checkout-form">
+                <h4 class="checkout-form-title">Sipariş Gönderim Bilgileri</h4>
+                <div class="form-group">
+                    <label class="form-label" for="order-name">Ad Soyad</label>
+                    <input type="text" id="order-name" class="form-control" placeholder="Adınız ve Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="order-phone">Telefon Numarası</label>
+                    <input type="tel" id="order-phone" class="form-control" placeholder="05XX XXX XX XX" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="order-address">Teslimat Adresi</label>
+                    <textarea id="order-address" class="form-control" rows="2" placeholder="Siparişinizin teslim edileceği adres" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="order-note">Sipariş Notu (İsteğe Bağlı)</label>
+                    <input type="text" id="order-note" class="form-control" placeholder="Örn: Pasta üstü yazısı, zil çalmasın vb.">
+                </div>
+            </div>
+
+            <div class="cart-total-row">
+                <span class="cart-total-label">Toplam:</span>
+                <span class="cart-total-amount" id="cart-total-amount">0 TL</span>
+            </div>
+            <button class="checkout-btn" id="checkout-action-btn" onclick="handleCheckoutClick()">Sipariş Bilgilerini Gir</button>
+        </div>
+    </div>
+
+    <!-- Toast Bildirim Kabı -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Uygulama JS Dosyası -->
+    <script src="app.js"></script>
+</body>
+</html>
