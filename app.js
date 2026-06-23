@@ -95,10 +95,64 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initApp() {
+    initPreloader();
     renderProducts();
     updateCartUI();
     setupEventListeners();
     setupHeaderScroll();
+}
+
+function initPreloader() {
+    const confettiContainer = document.getElementById('preloader-confetti');
+    const preloader = document.getElementById('preloader');
+    if (!confettiContainer || !preloader) return;
+
+    // Golden (altın) renk paleti
+    const colors = ['#b8902e', '#e5c453', '#d4af37', '#8c6239', '#f3cf55'];
+    const particleCount = 28;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        // Rastgele yuvarlak veya karo şekli
+        particle.className = `confetti-particle ${Math.random() > 0.5 ? 'diamond' : ''}`;
+        
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const size = Math.floor(Math.random() * 8) + 6; // 6px - 14px
+        const left = Math.random() * 100;
+        const delay = Math.random() * 2;
+        const duration = Math.random() * 1.5 + 1.5; // 1.5s - 3.0s
+        const drift = Math.random() * 60 - 30; // -30px ila +30px sapma
+
+        particle.style.backgroundColor = color;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.setProperty('--drift', `${drift}px`);
+
+        confettiContainer.appendChild(particle);
+    }
+
+    // Sayfa tamamen yüklendikten sonra (en az 1.2sn gösterilecek şekilde) gizle
+    const hidePreloader = () => {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+        }, 1200);
+    };
+
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader);
+    }
+
+    // Güvenlik amaçlı maksimum 3 saniye sonra kapat
+    setTimeout(() => {
+        if (!preloader.classList.contains('fade-out')) {
+            preloader.classList.add('fade-out');
+        }
+    }, 3000);
 }
 
 // Header kaydırma efekti
